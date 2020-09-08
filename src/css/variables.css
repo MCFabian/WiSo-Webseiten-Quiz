@@ -1,0 +1,20 @@
+:root{
+    --stn-color:#2772FC;
+    --darker-stn-color:#1f61db;
+    --grey: #73767c;
+    --hint:#5d5d5d;
+    --user-color:#2f44b0;
+    --border:0px;
+    --border-sm:0px;
+    --border-lg:3px;
+    --delete-c:#E94B50;
+    --edit-c:#f4b05b; 
+    --dark-grey: #26243a;
+    --lightgrey: #6C83AF;
+    --divider: #D1DCF0;
+	--green: #2ea44f;
+    --red: #FF4452;
+
+    /*Fonts*/
+    --noto: 'Noto Sans';
+}

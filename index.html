@@ -2,13 +2,84 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>jquery test</title>
+	<title>Scripted Reality</title>
 	<link rel="stylesheet" href="src/css/style.css">
+	<link rel="stylesheet" href="src/css/variables.css">
+	<link rel="stylesheet" href="src/css/fonts.css">
 	<script src="src/js/jquery.min.js"></script>
-	<script src="src/js/script.js"></script>
-</head>
 
+</head>
 <body>
-	<div id="myid">asdasd</div>
+
+	<div id="overlay">
+		<div class="pop-up">
+			<div class="pop-header">Quiz</div>
+			<div class="pop-body">
+
+				<div class="slideshow-container">
+					<div class="mySlides fade">
+						<p>Das ist ein erster Test</p>
+						<input type="text">
+
+						<label for="test">Klick</label>
+						<input type="radio" name="" id="test">
+
+					</div>
+					
+					<div class="mySlides fade">
+						<p>Das ist ein zweiter Test</p>
+						<select name="" id="">
+							<option value="asdasd"></option>
+						</select>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">3 / 3</div>
+						<div class="text">Caption Twaadasdsdo</div>
+					  </div>
+
+					
+				</div>
+				<div style="text-align:center">
+					<span class="dot" onclick="currentSlide(1)"></span> 
+					<span class="dot" onclick="currentSlide(2)"></span> 
+					<span class="dot" onclick="currentSlide(3)"></span> 
+				</div>
+
+			</div>
+			<div class="pop-end">
+				<button onclick="plusSlides(-1)" class="list-btn">Zurück</button>
+				<button id="close" class="cancel-btn">Schließen</button>
+				<button onclick="plusSlides(1)" class="stn-btn">Weiter</button>
+			</div>
+		</div>
+	</div>
+
+	<div id="main-wrapper">
+		<div>
+			<h1>Scripted Reality</h1>
+			<h3>Wie uns Realität vorgespielt wird...</h3>
+		</div>
+
+		<div class="img-container">
+			<img src="" alt="Header">
+		</div>
+		<hr>
+		<div class="" id="quiz-container">
+			<div class="img-container">
+				<img src="src/img/quiz.jpg" alt="Quiz">
+			</div>
+			<div>
+				<h1 class="">Lust auf ein Quiz?</h1>
+			<p>
+				Was hast du dir gemerkt und wie gut kennst du dich mit dem Thema aus?
+				<strong>Teste deine Wissen mit dem Quiz!</strong>
+			</p>
+			<button id="start" class="btn">Quiz Starten</button>
+			</div>
+		</div>
+	</div>
+	<script src="src/js/script.js"></script>
+	<script src="src/js/quiz.js"></script>
 </body>
 </html>
