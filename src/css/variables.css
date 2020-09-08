@@ -1,5 +1,5 @@
 :root{
-    --stn-color:#2772FC;
+    --stn-color:#2b468b;
     --darker-stn-color:#1f61db;
     --grey: #73767c;
     --hint:#5d5d5d;
@@ -14,6 +14,7 @@
     --divider: #D1DCF0;
 	--green: #2ea44f;
     --red: #FF4452;
+    --link: #91cecf;
 
     /*Fonts*/
     --noto: 'Noto Sans';

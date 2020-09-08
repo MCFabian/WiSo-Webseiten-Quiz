@@ -17,30 +17,38 @@
 			<div class="pop-body">
 
 				<div class="slideshow-container">
-					<div class="mySlides fade">
-						<p>Das ist ein erster Test</p>
-						<input type="text">
-
-						<label for="test">Klick</label>
-						<input type="radio" name="" id="test">
-
+					<div class="mySlides fade center">
+						<h3>Hey, sag mal, wie ist dein Name?</h3>
+						<p>Ich würde dich gern persönlich kennenlernen. Um dir ein paar Fragen zu stellen, kannst du mir gern deinen Namen verraten. Das ist aber kein Muss, nur etwas unpersönlicher. </p>
+						<label for="name">Dein Name (optional)</label>
+						<input placeholder="Max Mustermann" class="input-lg btn-center" id="name" type="text">
 					</div>
 					
 					<div class="mySlides fade">
-						<p>Das ist ein zweiter Test</p>
-						<select name="" id="">
-							<option value="asdasd"></option>
-						</select>
+						<div id="start-img"></div>
+						<h3 id="welcome"></h3>
 					</div>
 
 					<div class="mySlides fade">
-						<div class="numbertext">3 / 3</div>
-						<div class="text">Caption Twaadasdsdo</div>
+						<label class="long-label" for="first">
+							<strong>a</strong>
+							<div>Hier befindet sich die Antwort.</div>
+						</label>
+						<label class="long-label" for="first">
+							<strong>a</strong>
+							<div>Hier befindet sich die Antwort.</div>
+						</label>
+						<label class="long-label" for="first">
+							<strong>a</strong>
+							<div>Hier befindet sich die Antwort.</div>
+						</label>
+						<input type="radio" name="" id="first">
+
 					  </div>
 
 					
 				</div>
-				<div style="text-align:center">
+				<div id="dot-container" style="text-align:center">
 					<span class="dot" onclick="currentSlide(1)"></span> 
 					<span class="dot" onclick="currentSlide(2)"></span> 
 					<span class="dot" onclick="currentSlide(3)"></span> 
@@ -50,7 +58,7 @@
 			<div class="pop-end">
 				<button onclick="plusSlides(-1)" class="list-btn">Zurück</button>
 				<button id="close" class="cancel-btn">Schließen</button>
-				<button onclick="plusSlides(1)" class="stn-btn">Weiter</button>
+				<button id="next" onclick="plusSlides(1)" class="stn-btn">Weiter</button>
 			</div>
 		</div>
 	</div>
@@ -61,8 +69,13 @@
 			<h3>Wie uns Realität vorgespielt wird...</h3>
 		</div>
 
+		<div class="source">
+			<strong>Hinweis</strong><br>
+			Am Ende des Artikels wartet ein Quiz auf dich. Bist du schon neugierig? Hier gelangst du gleich <a class="" href="#quiz-container">zum Quiz.</a>
+		</div>
+
 		<div class="img-container">
-			<img src="" alt="Header">
+			<img src="src/img/quiz.jpg" alt="Header">
 		</div>
 		<hr>
 		<div class="" id="quiz-container">
