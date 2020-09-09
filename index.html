@@ -4,8 +4,11 @@
 	<meta charset="utf-8">
 	<title>Scripted Reality</title>
 	<link rel="stylesheet" href="src/css/style.css">
+	<link rel="stylesheet" href="src/css/blog_style.css">
 	<link rel="stylesheet" href="src/css/variables.css">
 	<link rel="stylesheet" href="src/css/fonts.css">
+
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,600;0,700;1,400&display=swap" rel="stylesheet">
 	<script src="src/js/jquery.min.js"></script>
 
 </head>
@@ -28,30 +31,67 @@
 						<div id="start-img"></div>
 						<h3 id="welcome"></h3>
 					</div>
-
+					<!-- Frage 1 -->
 					<div class="mySlides fade">
-						<label class="long-label" for="first">
-							<strong>a</strong>
-							<div>Hier befindet sich die Antwort.</div>
+						<p>Welcher dieser Begriffe steht ebenfalls beschreibt ebenalls das Format <strong>Scripted Reality?</strong></p>
+						<label class="long-label" for="qu-one-ans-one">
+							<strong>1.</strong>
+							<div>Dokumentationen</div>
+							<input checked type="radio" name="one" id="qu-one-ans-one">
 						</label>
-						<label class="long-label" for="first">
-							<strong>a</strong>
-							<div>Hier befindet sich die Antwort.</div>
+
+						<label class="long-label" for="qu-one-ans-two">
+							<strong>2.</strong>
+							<div>Spielfilme</div>
+							<input type="radio" name="one" id="qu-one-ans-two">
 						</label>
-						<label class="long-label" for="first">
-							<strong>a</strong>
-							<div>Hier befindet sich die Antwort.</div>
+
+						<label class="long-label" for="qu-one-ans-three">
+							<strong>3.</strong>
+							<div>Doku-Soap oder Reality-Soap</div>
+							<input type="radio" name="one" id="qu-one-ans-three">
 						</label>
-						<input type="radio" name="" id="first">
 
 					  </div>
-
+					  <!-- Frage 2 -->
+					  <div class="mySlides fade">
+						<p>Was sind typische Merkmale für die dramaturgische Handlung einer Doku-Soap?</p>
+						<label class="long-label" for="qu-two-ans-one">
+							<strong>1.</strong>
+							<div>Überspitze reale Ergebnisse, präsentiert mit einer Menge Emotionen.</div>
+							<input type="radio" name="two" id="qu-two-ans-one">
+						</label>
+						<label class="long-label" for="qu-two-ans-two">
+							<strong>2.</strong>
+							<div>Die realitätstreue Darstellung wahrer Ergebnisse.</div>
+							<input type="radio" name="two" id="qu-two-ans-two">
+						</label>
+					  </div>
+						<!-- Frage 3 -->
+						<div class="mySlides fade">
+							<p>Nachfolgend kannst du dir eine Seqzuenz ansehen. <strong>Entscheide selbstständig</strong>, ob diese aus einem Scripted Reality Format entsprang.</p>
+							<div class="flex">
+								<label class="long-label" for="qu-two-ans-one">
+									<strong>1.</strong>
+									<div>Scripted-Reality-Formt</div>
+									<input type="radio" name="two" id="qu-two-ans-one">
+								</label>
+								<label class="long-label" for="qu-two-ans-two">
+									<strong>2.</strong>
+									<div>Kein Scripted-Reality-Formt</div>
+									<input type="radio" name="two" id="qu-two-ans-two">
+								</label>
+							</div>
+						</div>
 					
 				</div>
 				<div id="dot-container" style="text-align:center">
 					<span class="dot" onclick="currentSlide(1)"></span> 
 					<span class="dot" onclick="currentSlide(2)"></span> 
 					<span class="dot" onclick="currentSlide(3)"></span> 
+					<span class="dot" onclick="currentSlide(4)"></span> 
+					<span class="dot" onclick="currentSlide(5)"></span> 
+					<span class="dot" onclick="currentSlide(4)"></span> 
 				</div>
 
 			</div>
@@ -59,6 +99,7 @@
 				<button onclick="plusSlides(-1)" class="list-btn">Zurück</button>
 				<button id="close" class="cancel-btn">Schließen</button>
 				<button id="next" onclick="plusSlides(1)" class="stn-btn">Weiter</button>
+				<button id="next" onclick="getscore()" class="agree-btn">DEBIG</button>
 			</div>
 		</div>
 	</div>

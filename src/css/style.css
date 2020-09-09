@@ -441,8 +441,8 @@ input, label, textarea, select {
   }
 
   input[type=radio] {
-	visibility: hidden;
-	display: none;
+/* 	visibility: hidden;
+	display: none; */
 }
   
   .input-clearer {
@@ -598,4 +598,27 @@ input, label, textarea, select {
 	font-weight: 400;
 	font-size: 1.1rem;
 	margin: auto auto auto 10px;
+}
+
+.label-false {
+	background: #ff44512d;
+	border: 1px solid var(--red);
+	color: var(--red);
+}
+
+.label-true {
+	background: #2ea44f1a;
+	border: 1px solid var(--green);
+	color: var(--green);
+}
+
+.flex {
+	display: flex;
+	flex-direction: row;
+	margin: auto;
+}
+
+.flex .long-label {
+	width: 45%;
+	margin: auto;
 }
