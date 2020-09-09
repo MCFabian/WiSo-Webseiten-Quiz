@@ -12,6 +12,8 @@ document.getElementById("next").addEventListener("click", function(){
 
 });
 
+
+
 // INSG
 var score;
 //var labelfalse = classList.add("label-false");
@@ -55,8 +57,56 @@ function gettwo(){
 	return steptwo;
 }
 
+function getthree(){
+	var one = document.getElementById("qu-three-ans-one");
+	var two = document.getElementById("qu-three-ans-two");
+
+	if(one.checked){
+		stepthree = 1;
+		alert("Richtig");
+	}
+
+	else {
+		stepthree = 0;
+		alert("Falsch");
+	}
+
+	return stepthree;
+}
+
+function getfour(){
+	var one = document.getElementById("qu-four-ans-one");
+	var two = document.getElementById("qu-four-ans-two");
+	var three = document.getElementById("qu-four-ans-three");
+	if(three.checked){
+		stepfour = 1;
+		alert("Richtig");
+	}
+
+	else {
+		stepfour = 0;
+		alert("Falsch");
+	}
+
+	return stepfour;
+}
+
 function getscore(){
-	score = getone() +gettwo();
+	score = getone() +gettwo() +getthree() +getfour();
+
+	var nameend = document.getElementById("name").value;
+	
+		if(nameend == "") {
+			document.getElementById("score").innerHTML = "Du hast " +score +"/5 Fragen richtig beantwortet!";
+			
+		}
+	
+		else {
+			document.getElementById("score").innerHTML = nameend +", du hast " +score +"/5 Fragen richtig beantwortet!";
+		}
+	
+
+	
 	alert(score);
 }
 

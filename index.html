@@ -58,32 +58,60 @@
 						<p>Was sind typische Merkmale für die dramaturgische Handlung einer Doku-Soap?</p>
 						<label class="long-label" for="qu-two-ans-one">
 							<strong>1.</strong>
-							<div>Überspitze reale Ergebnisse, präsentiert mit einer Menge Emotionen.</div>
+							<div>Die realitätstreue Darstellung wahrer Ergebnisse.</div>
 							<input type="radio" name="two" id="qu-two-ans-one">
 						</label>
 						<label class="long-label" for="qu-two-ans-two">
 							<strong>2.</strong>
-							<div>Die realitätstreue Darstellung wahrer Ergebnisse.</div>
+							<div>Überspitze reale Ergebnisse, präsentiert mit einer Menge Emotionen.</div>
 							<input type="radio" name="two" id="qu-two-ans-two">
 						</label>
 					  </div>
 						<!-- Frage 3 -->
 						<div class="mySlides fade">
 							<p>Nachfolgend kannst du dir eine Seqzuenz ansehen. <strong>Entscheide selbstständig</strong>, ob diese aus einem Scripted Reality Format entsprang.</p>
+							<div class="video-container">asds</div>
 							<div class="flex">
-								<label class="long-label" for="qu-two-ans-one">
+								<label class="long-label" for="qu-three-ans-one">
 									<strong>1.</strong>
 									<div>Scripted-Reality-Formt</div>
-									<input type="radio" name="two" id="qu-two-ans-one">
+									<input type="radio" name="three" id="qu-three-ans-one">
 								</label>
-								<label class="long-label" for="qu-two-ans-two">
+								<label class="long-label" for="qu-three-ans-two">
 									<strong>2.</strong>
 									<div>Kein Scripted-Reality-Formt</div>
-									<input type="radio" name="two" id="qu-two-ans-two">
+									<input type="radio" name="three" id="qu-three-ans-two">
 								</label>
 							</div>
 						</div>
-					
+						<!-- Frage 4 -->
+						<div class="mySlides fade">
+							<p>Scripted-Reality-Formate können gerade von jungen Zuschauergruppen nicht von einer dokumentarischen Berichterstattung unterschieden werden und somit als real empfunden werden. <br><strong>Ab welchem Alter ist man in der Lage, Wirklichkeit und Scripted-Reality zu unterscheiden?</strong></p>
+							<div class="video-container">asds</div>
+							<div class="flex">
+								<label class="square-label" for="qu-four-ans-one">
+									<div>5-7 Jahre</div>
+									<input type="radio" name="four" id="qu-four-ans-one">
+								</label>
+								<label class="square-label" for="qu-four-ans-two">
+									<div>7-9 Jahre</div>
+									<input type="radio" name="four" id="qu-four-ans-two">
+								</label>
+								<label class="square-label" for="qu-four-ans-three">
+									<div>12-17 Jahre</div>
+									<input type="radio" name="four" id="qu-four-ans-three">
+								</label>
+							</div>
+						</div>
+						<!-- Auswertung -->
+						<div class="mySlides fade">
+							<div id="end-img"></div>
+							<p>Na, bist du schon gespannt, wie viele Fragen du richtig beantwortet hast?</p>
+							<h3 id="score"></h3>
+							<button id="next" onclick="getscore()" class="agree-btn">Ergebnis berechnen</button>
+								
+
+						</div>
 				</div>
 				<div id="dot-container" style="text-align:center">
 					<span class="dot" onclick="currentSlide(1)"></span> 
@@ -91,7 +119,7 @@
 					<span class="dot" onclick="currentSlide(3)"></span> 
 					<span class="dot" onclick="currentSlide(4)"></span> 
 					<span class="dot" onclick="currentSlide(5)"></span> 
-					<span class="dot" onclick="currentSlide(4)"></span> 
+					<span class="dot" onclick="currentSlide(6)"></span> 
 				</div>
 
 			</div>
