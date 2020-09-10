@@ -59,6 +59,13 @@ p {
 	line-height: 1.4;
 	font-size: 1.2rem;
 	margin: 20px 0;
+	font-weight: 300;
+}
+
+.main-text {
+	color: var(--grey);
+	line-height: 1.6;
+	font-size: 1.4rem;
 }
 
 h1 {
@@ -69,7 +76,11 @@ h1 {
 h2 {
 	color: var(--stn-color);
 	font-size: 1.6rem;
-	margin: 20px;
+	margin: 20px 0;
+}
+
+h3 {
+	margin: 10px auto;
 }
 
 .img-container {

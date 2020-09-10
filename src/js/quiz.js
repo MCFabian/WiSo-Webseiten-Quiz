@@ -105,8 +105,6 @@ function getscore(){
 			document.getElementById("score").innerHTML = nameend +", du hast " +score +"/5 Fragen richtig beantwortet!";
 		}
 	
-
-	
 	alert(score);
 }
 
