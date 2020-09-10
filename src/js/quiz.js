@@ -14,6 +14,9 @@ window.addEventListener("load", function(){
 	var radioeight = document.getElementById("qu-four-la-one");
 	var radionine = document.getElementById("qu-four-la-two");
 	var radioten = document.getElementById("qu-four-la-three");
+
+	var radioeleven = document.getElementById("qu-five-la-one");
+	var radiotwelve = document.getElementById("qu-five-la-two");
 	
 	//Frage 1
 
@@ -81,6 +84,15 @@ window.addEventListener("load", function(){
 
 	// Frage 5
 
+	radioeleven.addEventListener("click", function(){
+		radioeleven.classList.add("active-radio");
+		radiotwelve.classList.remove("active-radio");
+	});
+
+	radiotwelve.addEventListener("click", function(){
+		radioeleven.classList.remove("active-radio");
+		radiotwelve.classList.add("active-radio");
+	});
 });
 
 
@@ -105,13 +117,9 @@ document.getElementById("next").addEventListener("click", function(){
 
 // INSG
 var score;
-var addactive = classList.add("active-radio");
-var removeactive = classList.remove("active-radio");
-//var labelfalse = classList.add("label-false");
-//var labeltrue = classList.add("label-true");
 
 
-// FRAG 1
+// FRAGE 1
 function getone() {
 	var one = document.getElementById("qu-one-ans-one");
 	var two = document.getElementById("qu-one-ans-two");
@@ -134,6 +142,7 @@ function getone() {
 function gettwo(){
 	var one = document.getElementById("qu-two-ans-one");
 	var two = document.getElementById("qu-two-ans-two");
+	var steptwo;
 
 	if(two.checked){
 		steptwo = 1;
@@ -151,6 +160,7 @@ function gettwo(){
 function getthree(){
 	var one = document.getElementById("qu-three-ans-one");
 	var two = document.getElementById("qu-three-ans-two");
+	var stepthree;
 
 	if(one.checked){
 		stepthree = 1;
@@ -169,23 +179,43 @@ function getfour(){
 	var one = document.getElementById("qu-four-ans-one");
 	var two = document.getElementById("qu-four-ans-two");
 	var three = document.getElementById("qu-four-ans-three");
+	var stepfour;
+
 	if(three.checked){
 		stepfour = 1;
-		alert("Richtig");
+		alert("Ant 4Richtig");
 	}
 
 	else {
 		stepfour = 0;
-		alert("Falsch");
+		alert("Ant 4 Falsch");
 	}
 
 	return stepfour;
 }
 
-function getscore(){
-	score = getone() +gettwo() +getthree() +getfour();
+function getfive(){
+	var one = document.getElementById("qu-five-ans-one");
+	var two = document.getElementById("qu-five-ans-two");
+	var stepfive;
 
-	/* var nameend = document.getElementById("name").value;
+	if(one.checked){
+		stepfive = 1;
+		alert("Richtig");
+	}
+
+	else {
+		stepfive = 0;
+		alert("Falsch");
+	}
+
+	return stepfive;
+}
+
+function getscore(){
+	score = getone() +gettwo() +getthree() +getfour() +getfive();
+
+	var nameend = document.getElementById("name").value;
 	
 		if(nameend == "") {
 			document.getElementById("score").innerHTML = "Du hast " +score +"/5 Fragen richtig beantwortet!";
@@ -193,7 +223,7 @@ function getscore(){
 	
 		else {
 			document.getElementById("score").innerHTML = nameend +", du hast " +score +"/5 Fragen richtig beantwortet!";
-		} */
+		} 
 	
 	alert(score);
 }

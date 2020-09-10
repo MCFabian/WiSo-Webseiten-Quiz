@@ -27,7 +27,7 @@ body {
 	width: 200px;
 	position: fixed;
 	margin: auto;
-	bottom: 60px;
+	bottom: 20px;
 	padding: 15px 20px;
 	border-radius: 3px;
 	left: 0;
@@ -385,6 +385,7 @@ h3 {
 	padding: 20px 0px;	
 	text-align: center;
 	max-height: 500px;
+	overflow: scroll;
 }
 
 .pop-end {
@@ -646,7 +647,7 @@ input, label, textarea, select {
 }
 
 #kids1-img {
-	background-image: url("../img/kids.jpg");
+	background-image: url("../img/kids.png");
 	background-size: contain;
 	width: 100px;
 	height: 100px;
@@ -656,7 +657,7 @@ input, label, textarea, select {
 }
 
 #kids2-img {
-	background-image: url("../img/teens.jpg");
+	background-image: url("../img/teens.png");
 	background-size: contain;
 	width: 100px;
 	height: 100px;
@@ -666,7 +667,7 @@ input, label, textarea, select {
 }
 
 #kids3-img {
-	background-image: url("../img/youth.jpg");
+	background-image: url("../img/youth.png");
 	background-size: contain;
 	width: 100px;
 	height: 100px;
