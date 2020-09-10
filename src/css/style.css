@@ -9,13 +9,31 @@
 
 html {
 	font-size: 15px;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 body {
 	background: #F6F6F6;
 	font-size: 1rem;
-	font-family: var(--noto);
+	font-family: 'Source Sans Pro';
 	font-weight: 400;
+}
+
+#quizhint {
+	background: var(--stn-color);
+	display: inline-block;
+	z-index: 50;
+	text-align: center;
+	width: 200px;
+	position: fixed;
+	margin: auto;
+	bottom: 60px;
+	padding: 15px 20px;
+	border-radius: 3px;
+	left: 0;
+	right: 0;
+	color: #fff;
+	box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
 }
 
 #main-wrapper {
@@ -60,12 +78,47 @@ p {
 	font-size: 1.2rem;
 	margin: 20px 0;
 	font-weight: 300;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+blockquote {
+	color: var(--stn-color);
+	font-weight: 400  !important;
+	font-size: 1.8rem;
+	margin: 20px 0;
+	font-weight: 300;
+	font-family: 'Source Sans Pro', sans-serif;
+	background: #fafbff;
+	padding: 10px;
+	line-height: 1;
+}
+
+#gunther {
+	height: 35px;
+	width: 35px;
+	background-image: url("../img/günther.jpg");
+	background-size: cover;
+	border-radius: 100%;
+	margin: 10px 10px 0 0;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: inline-block;
+}
+
+blockquote span {
+	font-size: 16px;
+	font-weight: 300;
+	margin: 0;
+	line-height: 1;
 }
 
 .main-text {
 	color: var(--grey);
 	line-height: 1.6;
 	font-size: 1.4rem;
+	font-weight: 300;
+	margin: 0 !important;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 h1 {
@@ -74,8 +127,10 @@ h1 {
 }
 
 h2 {
+	font-weight: 400;
 	color: var(--stn-color);
-	font-size: 1.6rem;
+	font-size: 25px;
+	margin: 0;
 	margin: 20px 0;
 }
 
@@ -474,10 +529,15 @@ input, label, textarea, select {
 	border-radius: 100%;
   }
   
+
+::placeholder {
+	color: var(--divider);
+}
+
   /* ----------  Label ---------  */
   
   label {
-	font-family: 'Source Sans Pro',Arial, Helvetica, sans-serif;
+	font-family: 'Source Sans Pro';
 	color: #888888;
 	font-size: 1.05rem;
 	font-weight: 600;
@@ -553,12 +613,11 @@ input, label, textarea, select {
   /*Source Box*/
 
   .source {
-	  background: #2772fc11;
-	  padding: 15px;
-	  width: 100%;
-	  color: var(--dark-grey);
-	  margin: 20px 0;
-	  border-radius: 3px;
+	border: 2px solid var(--divider);
+	padding: 30px;
+	background: #fff;
+	width: 100%;
+	background: rgba(43, 70, 139, 0.05);
   }
 
   .source strong {
@@ -624,6 +683,11 @@ input, label, textarea, select {
 	background: #2772fc11;
 }
 
+.active-radio {
+	background: #2772fc11;
+	border: 1px solid var(--stn-color);
+}
+
 .long-label strong{
 	color: var(--stn-color);
 	font-weight: 700;
@@ -667,7 +731,15 @@ input, label, textarea, select {
 .video-container {
 	height: auto;
 	width: 100%;
-	max-width: 600px;
+	max-width: 400px;
 	background: var(--divider);
 	margin: 20px auto;
+	overflow: hidden;
+	border-radius: 3px;
+}
+
+.video-container video {
+	display: block;
+	width: 100%;
+	height: auto;
 }

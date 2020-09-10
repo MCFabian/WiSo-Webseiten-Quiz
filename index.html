@@ -8,12 +8,10 @@
 	<link rel="stylesheet" href="src/css/variables.css">
 	<link rel="stylesheet" href="src/css/fonts.css">
 
-	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,600;0,700;1,400&display=swap" rel="stylesheet">
-	<script src="src/js/jquery.min.js"></script>
-
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
+	<a href="#quiz-container" id="quizhint">Direkt zum Quiz</a>
 	<div id="overlay">
 		<div class="pop-up">
 			<div class="pop-header">Quiz</div>
@@ -24,7 +22,7 @@
 						<h3>Hey, sag mal, wie ist dein Name?</h3>
 						<p>Ich würde dich gern persönlich kennenlernen. Um dir ein paar Fragen zu stellen, kannst du mir gern deinen Namen verraten. Das ist aber kein Muss, nur etwas unpersönlicher. </p>
 						<label for="name">Dein Name (optional)</label>
-						<input placeholder="Max Mustermann" class="input-lg btn-center" id="name" type="text">
+						<input placeholder="Max" class="input-lg btn-center" id="name" type="text">
 					</div>
 					
 					<div class="mySlides fade">
@@ -34,19 +32,19 @@
 					<!-- Frage 1 -->
 					<div class="mySlides fade">
 						<p>Welcher dieser Begriffe steht ebenfalls beschreibt ebenalls das Format <strong>Scripted Reality?</strong></p>
-						<label class="long-label" for="qu-one-ans-one">
+						<label id="qu-one-la-one" class="long-label" for="qu-one-ans-one">
 							<strong>1.</strong>
 							<div>Dokumentationen</div>
 							<input checked type="radio" name="one" id="qu-one-ans-one">
 						</label>
 
-						<label class="long-label" for="qu-one-ans-two">
+						<label id="qu-one-la-two" class="long-label" for="qu-one-ans-two">
 							<strong>2.</strong>
 							<div>Spielfilme</div>
 							<input type="radio" name="one" id="qu-one-ans-two">
 						</label>
 
-						<label class="long-label" for="qu-one-ans-three">
+						<label id="qu-one-la-three" class="long-label" for="qu-one-ans-three">
 							<strong>3.</strong>
 							<div>Doku-Soap oder Reality-Soap</div>
 							<input type="radio" name="one" id="qu-one-ans-three">
@@ -56,12 +54,12 @@
 					  <!-- Frage 2 -->
 					  <div class="mySlides fade">
 						<p>Was sind typische Merkmale für die dramaturgische Handlung einer Doku-Soap?</p>
-						<label class="long-label" for="qu-two-ans-one">
+						<label id="qu-two-la-one" class="long-label" for="qu-two-ans-one">
 							<strong>1.</strong>
 							<div>Die realitätstreue Darstellung wahrer Ergebnisse.</div>
 							<input type="radio" name="two" id="qu-two-ans-one">
 						</label>
-						<label class="long-label" for="qu-two-ans-two">
+						<label id="qu-two-la-two" class="long-label" for="qu-two-ans-two">
 							<strong>2.</strong>
 							<div>Überspitze reale Ergebnisse, präsentiert mit einer Menge Emotionen.</div>
 							<input type="radio" name="two" id="qu-two-ans-two">
@@ -70,14 +68,16 @@
 						<!-- Frage 3 -->
 						<div class="mySlides fade">
 							<p>Nachfolgend kannst du dir eine Seqzuenz ansehen. <strong>Entscheide selbstständig</strong>, ob diese aus einem Scripted Reality Format entsprang.</p>
-							<div class="video-container">asds</div>
+							<div class="video-container">
+								<video controls src="src/img/wiso-clip.mp4"></video>
+							</div>
 							<div class="flex">
-								<label class="long-label" for="qu-three-ans-one">
+								<label id="qu-three-la-one" class="long-label" for="qu-three-ans-one">
 									<strong>1.</strong>
 									<div>Scripted-Reality-Formt</div>
 									<input type="radio" name="three" id="qu-three-ans-one">
 								</label>
-								<label class="long-label" for="qu-three-ans-two">
+								<label id="qu-three-la-two" class="long-label" for="qu-three-ans-two">
 									<strong>2.</strong>
 									<div>Kein Scripted-Reality-Formt</div>
 									<input type="radio" name="three" id="qu-three-ans-two">
@@ -89,15 +89,15 @@
 							<p>Scripted-Reality-Formate können gerade von jungen Zuschauergruppen nicht von einer dokumentarischen Berichterstattung unterschieden werden und somit als real empfunden werden. <br><strong>Ab welchem Alter ist man in der Lage, Wirklichkeit und Scripted-Reality zu unterscheiden?</strong></p>
 							<div class="video-container">asds</div>
 							<div class="flex">
-								<label class="square-label" for="qu-four-ans-one">
+								<label id="qu-four-la-one" class="square-label" for="qu-four-ans-one">
 									<div>5-7 Jahre</div>
 									<input type="radio" name="four" id="qu-four-ans-one">
 								</label>
-								<label class="square-label" for="qu-four-ans-two">
+								<label id="qu-four-la-two" class="square-label" for="qu-four-ans-two">
 									<div>7-9 Jahre</div>
 									<input type="radio" name="four" id="qu-four-ans-two">
 								</label>
-								<label class="square-label" for="qu-four-ans-three">
+								<label id="qu-four-la-three" class="square-label" for="qu-four-ans-three">
 									<div>12-17 Jahre</div>
 									<input type="radio" name="four" id="qu-four-ans-three">
 								</label>
@@ -108,7 +108,7 @@
 							<div id="end-img"></div>
 							<p>Na, bist du schon gespannt, wie viele Fragen du richtig beantwortet hast?</p>
 							<h3 id="score"></h3>
-							<button id="next" onclick="getscore()" class="agree-btn">Ergebnis berechnen</button>
+							<button id="end" onclick="getscore()" class="agree-btn">Ergebnis berechnen</button>
 						</div>
 				</div>
 				<div id="dot-container" style="text-align:center">
@@ -135,14 +135,18 @@
 			<h1>Scripted Reality</h1>
 			<h3>Wie uns Realität vorgespielt wird...</h3>
 		</div>
-		<div class="source">
-			<strong>Hinweis</strong><br>
-			Am Ende des Artikels wartet ein Quiz auf dich. Bist du schon neugierig? Hier gelangst du gleich <a class="" href="#quiz-container">zum Quiz.</a>
+		<div>
+			<h2>Was ist Scripted-Reality eigentlich?</h2>
+			<p class="main-text">
+				Mit Scripted Reality beschreibt man ein TV-Genre, bei dem die Dokumentation realer Ergebnisse im Mittelpunkt der Inszenierung steht. Die Szenen werden dabei meist von Laiendarstellern, unter Einhaltung eines zuvor von der Produktionsfirma ausgearbeiteten Scripts, gespielt. Fernsehsender bezeichnen diese Produktionen meist auch nicht als Scripted Reality sonder als Doku-Soap, Reality Soaps oder Pseudo-Reality. Die größte Produktionsfirma, Filmpool, für solche Art von Fernsehformaten bezeichnet diese als Scripted Entertainment, viele im Volksmund auch als Trash-TV.</p><br>
+			<p class="main-text">Auffällig dabei, der Begriff Pseudo Reality ist Strenggenommen ein Oxymoron, eine Zusammenstellung zweier sich widersprechender Begriffe. So etwas wie bittersüß, vegetarische Wurst oder oder helle Nacht.</p><br>
+
+			<h2>Realität oder Realität?</h2>
+			<p class="main-text">Die Kameraführung ist meist verwackelt, es gibt abgesetzte Interviews und manchmal werden sogar Nummernschilder oder Personen unkenntlich gemacht, um deren Persönlichkeitsrechte zu schützen. Aber vor wem? Es wirkt fast so, als wolle man uns die erfundene Situation so glaubwürdig verkaufen, dass wir denken, sie sei real. Das diese uns vorgespielten Geschichten </p><br>
+			<p class="main-text">Die Macher von Scripted Reality behaupten, der Zuschauer erkenne, was ihm vorgespielt wird und was echt sei. </p><br>
+			<blockquote>„Man sollte den Zuschauer nicht unterschätzen“, meint “. <br> <span><strong>Günter Stampf, </strong>erfolgreicher Produzent von „Die Schulermittler</span></blockquote><br>
+			<p class="main-text">Damit meint er wohl die zuvor für wenige Sekunden klein eingeblendeten Hinweise genügen, um aufzuklären. Fiktion erkennen, ist dabei sinnvoll seinen Kindern beizubringen. In der Alterspanne zwischen 12-17 Jahren sind Kinder und Jugendliche dazu in der Lage, Scripted Reality von der tatsächlichen Wirklichkeit zu unterscheiden. Das hängt natürlich auch stark von der geistigen Kindesentwicklung ab. </p><br>
 		</div>
-		<h2>Was ist Scripted-Reality eigentlich?</h2>
-		<p class="main-text">
-			Mit Scripted Reality beschreibt man ein TV-Genre, bei dem die Dokumentation realer Ergebnisse im Mittelpunkt der Inszenierung steht. Die Szenen werden dabei meist von Laiendarstellern, unter Einhaltung eines zuvor von der Produktionsfirma ausgearbeiteten Scripts, gespielt. Fernsehsender bezeichnen diese Produktionen meist auch nicht als Scripted Reality sonder als Doku-Soap, Reality Soaps oder Pseudo-Reality. Die größte Produktionsfirma, Filmpool, für solche Art von Fernsehformaten bezeichnet diese als Scripted Entertainment, viele im Volksmund auch als Trash-TV.
-		</p>
 
 
 

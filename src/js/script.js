@@ -20,6 +20,8 @@ window.addEventListener("load", function(){
 	function closemodal(){
 		modal.style.display = "none";
 	}
+
+	
 });
 
 // Slider
