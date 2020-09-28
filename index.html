@@ -6,11 +6,33 @@
 	<link rel="stylesheet" href="src/css/style.css">
 	<link rel="stylesheet" href="src/css/variables.css">
 	<link rel="stylesheet" href="src/css/fonts.css">
-
-	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap" rel="stylesheet"> 
 </head>
 <body>
-	<a href="#quiz-container" id="quizhint">Direkt zum Quiz</a>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar" style="width: 4.59%;"></div>
+    </div>
+
+    <a href="#top" id="backtotop" class="stn-btn icon">arrow_upward</a>
+    <div id="content_browser">
+        <div class="icon" id="expand">expand_less</div>
+        <div style="display: none;" class="icon" id="minimize">expand_more</div>
+        <h2>Inhalt</h2>
+        <ol>
+            <!-- <li><a href="#h1">Einleitung</a></li> -->
+            <li><a href="#h2">Was ist Scripted Reality eigentlich?</a></li>
+            <li><a href="#h3">Realität oder Realität?</a></li>
+            <li><a href="#h4">Überschätzte Zuschauer</a></li>
+            <li><a href="#h5">Was sind typische Themen für Doku-Soaps?</a></li>
+            <li><a href="#h6">Wer schaut Doku-Soaps?</a></li>
+            <li><a href="#h7">Fazit</a></li>
+        </ol>
+        <a class="stn-btn" href="#quiz-container" id="quizhint"><i class="icon">history_edu</i>Direkt zum Quiz</a>
+    </div>
+	
 	<div id="overlay">
 		<div class="pop-up">
 			<div class="pop-header">Quiz</div>
@@ -27,7 +49,7 @@
 					<div class="mySlides fade">
 						<div id="start-img"></div>
 						<h3 id="welcome"></h3>
-						<p>Nachfolgend werden <strong>dir fünf Fragen gestellt.</strong> Du kannst vor dem beantworten jederzeit nachlesen. <br> Viel Spaß mit dem Quiz.</p>
+						<p>Nachfolgend werden <strong>dir fünf Fragen gestellt.</strong> Du kannst vor dem Beantworten jederzeit nachlesen. <br> Viel Spaß mit dem Quiz.</p>
 					</div>
 					<!-- Frage 1 -->
 					<div class="mySlides fade">
@@ -111,21 +133,20 @@
 								<label id="qu-five-la-one" class="long-label" for="qu-five-ans-one">
 									<strong>1.</strong>
 									<div>Arbeitslose und Hausfrauen</div>
-									<input type="radio" name="four" id="qu-five-ans-one">
+									<input type="radio" name="five" id="qu-five-ans-one">
 								</label>
 								<label id="qu-five-la-two" class="long-label" for="qu-five-ans-two">
 									<strong>2.</strong>
 									<div>Berufstätige und Pendler</div>
-									<input type="radio" name="four" id="qu-five-ans-two">
+									<input type="radio" name="five" id="qu-five-ans-two">
 								</label>
-							
 						</div>
 						<!-- Auswertung -->
 						<div class="mySlides fade">
 							<div id="end-img"></div>
-							<p>Na, bist du schon gespannt, wie viele Fragen du richtig beantwortet hast?</p>
+							<p id="hide">Na, bist du schon gespannt, wie viele Fragen du richtig beantwortet hast?</p>
 							<h3 id="score"></h3>
-							<button id="end" onclick="getscore()" class="agree-btn">Ergebnis berechnen</button>
+							<button id="end" onclick="getscore()" class="agree-btn"><i class="icon">poll</i>Ergebnis berechnen</button>
 						</div>
 				</div>
 				<div id="dot-container" style="text-align:center">
@@ -138,7 +159,6 @@
 					<span class="dot" onclick="currentSlide(7)"></span> 
 					<span class="dot" onclick="currentSlide(8)"></span> 
 				</div>
-
 			</div>
 			<div class="pop-end">
 				<button onclick="plusSlides(-1)" class="list-btn">Zurück</button>
@@ -149,22 +169,69 @@
 	</div>
 
 	<div id="main-wrapper">
+		<div id="top">
+			<h1>Das Fernsehen als Theater der Wirklichkeit</h1>
+			<h3>Was Scripted-Reality ist und was es mit uns macht...</h3>
+        </div>
+        <div class="author">
+            <div></div>
+            <div>
+                Von <strong>Fabian Rauer</strong> veröffentlicht am: 10.09.2020.
+            </div>
+        </div>
 		<div>
-			<h1>Scripted Reality</h1>
-			<h3>Wie uns Realität vorgespielt wird...</h3>
-		</div>
-		<div>
-			<h2>Was ist Scripted-Reality eigentlich?</h2>
-			<p class="main-text">
-				Mit Scripted Reality beschreibt man ein TV-Genre, bei dem die Dokumentation realer Ergebnisse im Mittelpunkt der Inszenierung steht. Die Szenen werden dabei meist von Laiendarstellern, unter Einhaltung eines zuvor von der Produktionsfirma ausgearbeiteten Scripts, gespielt. Fernsehsender bezeichnen diese Produktionen meist auch nicht als Scripted Reality sonder als Doku-Soap, Reality Soaps oder Pseudo-Reality. Die größte Produktionsfirma, Filmpool, für solche Art von Fernsehformaten bezeichnet diese als Scripted Entertainment, viele im Volksmund auch als Trash-TV.</p><br>
-			<p class="main-text">Auffällig dabei, der Begriff Pseudo Reality ist Strenggenommen ein Oxymoron, eine Zusammenstellung zweier sich widersprechender Begriffe. So etwas wie bittersüß, vegetarische Wurst oder oder helle Nacht.</p><br>
-
-			<h2>Realität oder Realität?</h2>
+			<h2 id="h2">Was ist Scripted-Reality eigentlich?</h2>
+			<p class="main-text">Mit Scripted Reality beschreibt man ein TV-Genre, bei dem die Dokumentation realer Ergebnisse im Mittelpunkt der Inszenierung steht. Die Szenen werden dabei meist von Laiendarstellern, unter Einhaltung eines zuvor von der Produktionsfirma ausgearbeiteten Scripts, gespielt. Fernsehsender bezeichnen diese Produktionen meist auch nicht als Scripted Reality sonder als Doku-Soap, Reality Soaps oder Pseudo-Reality. Die größte Produktionsfirma, Filmpool, für solche Art von Fernsehformaten bezeichnet diese als Scripted Entertainment, viele im Volksmund auch als Trash-TV.			<p class="main-text">Auffällig dabei, der Begriff Pseudo Reality ist Strenggenommen ein Oxymoron, eine Zusammenstellung zweier sich widersprechender Begriffe. So etwas wie bittersüß, vegetarische Wurst oder oder helle Nacht.</p><br>
+            <p class="main-text">Auffällig dabei, der Begriff Pseudo Reality ist strenggenommen ein Oxymoron, eine Zusammenstellung zweier sich widersprechender Begriffe. So etwas wie bittersüß, vegetarische Wurst oder oder helle Nacht.</p>
+            <h2 id="h3">Realität oder Realität?</h2>
 			<p class="main-text">Die Kameraführung ist meist verwackelt, es gibt abgesetzte Interviews und manchmal werden sogar Nummernschilder oder Personen unkenntlich gemacht, um deren Persönlichkeitsrechte zu schützen. Aber vor wem? Es wirkt fast so, als wolle man uns die erfundene Situation so glaubwürdig verkaufen, dass wir denken, sie sei real. Das diese uns vorgespielten Geschichten </p><br>
 			<p class="main-text">Die Macher von Scripted Reality behaupten, der Zuschauer erkenne, was ihm vorgespielt wird und was echt sei. </p><br>
-			<blockquote>„Man sollte den Zuschauer nicht unterschätzen“ <br> <span>meint <strong>Günter Stampf, </strong>erfolgreicher Produzent von „Die Schulermittler</span></blockquote><br>
+			<blockquote>„Man sollte den Zuschauer nicht unterschätzen...“ <br> <span><strong>Günter Stampf, </strong>erfolgreicher Produzent von: Die Schulermittler</span></blockquote><br>
 			<p class="main-text">Damit meint er wohl die zuvor für wenige Sekunden klein eingeblendeten Hinweise genügen, um aufzuklären. Fiktion erkennen, ist dabei sinnvoll seinen Kindern beizubringen. In der Alterspanne zwischen 12-17 Jahren sind Kinder und Jugendliche dazu in der Lage, Scripted Reality von der tatsächlichen Wirklichkeit zu unterscheiden. Das hängt natürlich auch stark von der geistigen Kindesentwicklung ab. </p><br>
-		</div>
+            <p class="main-text">Ungeachtet des Alters ist es wichtig, dass Eltern und Kinder diese Sendungen zumindest anfangs gemeinsam schauen und dabei über den Unterschied von Realität und Fiktion sprechen und auch über die Menschenbilder diskutieren, die dort gezeigt werden.</p>
+            
+            <h2 id="h4">Überschätzte Zuschauer</h2>
+            <p class="main-text">Wenn wir die Tatsache betrachten, dass Hinweise vor Beginn und nach Ende der Darstellung eingeblendet werden, stellt man sich die Frage: Was ist, wenn wir Zuschauer mitten ins geschehen schalten, zuvor den Hinweis gar nicht erfassen konnten?</p><br>
+            <p class="main-text">Mit einer <a href="http://daserste.ndr.de/pa-norama/Die-Ergebnisse-der-Ipsos-Studie,fernseh-studie101.html">repräsentativen Umfrage hatte 2017 das Marktforschungsinstitut</a> Ipos im Auftrag für das Fernsehmagazin Panorama (ARD) 100 Zuschauer befragt. Diese erhalten einen Ausschnitt aus der Doku-Soap „Die Schulermittler“, eine Sendung welche auf dem Privatfernsehsender RTL ausgestrahlt wird und diesem im Nachmittagsprogramm zu hohen Einschaltquoten verhilft. Es lohnt sich als auch für die Sender, da durch zwischengeschaltete Werbeblöcke eine Menge Geld verdient werden kann.</p><br>
+            <p class="main-text">Es wurde dabei nicht gekennzeichnet, dass es sich um ein Scripted Reality Format handelt, sonder mitten in den Inhalt geschalten. Im Anschluss wurden jedem Probanden fünf Statements präsentiert, zu denen sie zustimmen oder welche sie ablehnen konnten. </p><br>
+
+            <p class="main-text"><strong>Überraschend, bei dem Statement: „Die gezeigte Handlung ist echt, wurde nicht für die Kamera gespielt“, überwiegt mit 45% keine Zustimmung. Ein Großteil der befragten, glaube das gezeigte Material sei real.</strong></p>
+        
+
+            <h2 id="h5">Was sind typische Themen für Doku-Soaps?</h2>
+            <p class="main-text">Allgemein kann sagen, es soll spannend sein. Die Darstellung sogenannter Stereotypen gehört dabei zum Programm. Es sollen Emotionen transportiert werden, die den Zuschauer erreichen und anziehen weiter zuschauen. Dabei geht es wie zu oft im Fernsehen, um die Quote. Laut eines Ex-Autors von Trash-TV Beiträgen zeiht eines immer: „Fette faule Mütter“. Ebenfalls sagt er: „Mein Arbeitsauftrag: Möglichst assig soll es sein. Wut ist dabei einer der am meisten dargestellten Emotionen, laut und mit viel Geschrei wird der Zuschauer vor dem Fernsehgerät angesprochen</p><br>
+            <p class="main-text">Inhaltlich unterscheiden sich die verschiedenen Sendungen nur geringfügig. Einer der Langzeit-Doku-Soaps von RTL ist „Familien im Brennpunkt“. Hier werden Familien mit Problemen, wie Scheidungsdramen, Sorgerechts-Streitigkeiten, Mobbing oder Streit mit den Eltern gezeigt. Die Familien und Figuren werden dabei in ihrem Alltag von der Kamera begleitet und in zwischengeschalteten Interviews dieser der Sicht zur Situation geschildert. Am Ende einer Folge Familien im Brennpunkt findet sich stets eine Lösung des Problems. </p><br>
+            <p class="main-text">Diese Formate sollen uns zeigen wie es wirklich ist. Inhaltlich wird stark übertrieben, viel ist ausgemalt. Soziale Konfliktsituationen, wie eine Trennung werden auf ein minimum heruntergebrochen. Die Schuldfrage und die im Verlauf der Handlung auftretende Lösung sind dabei scheinbar einfach, gerade für jüngere Zuschauer trügerisch. Kinder und Jugendliche haben dann das Gefühl, hier endlich die Zusammenhänge verstanden zu haben und etwas fürs Leben mitzunehmen.</p><br>
+            <p class="main-text">Was auch sehr oft zieht ist das Motto: Gut, dass es bei mir nicht auch so ist. Viele Jugendliche befinden sich selbst in sozialkritischen Situationen. Familien leiden unter finanziellen Problemen, sind unter Umständen selbst Außenseiter und werden gemobbt oder bemerken die Streitigkeiten zwischen den Eltern, die wohlmöglich zu einer Trennung führen könnten.</p><br>
+            <p class="main-text">Egal, wie schlimm aber auch die Situation auch sein mag, die ausgemalten und oftmals überzogenen Geschichten sind oftmals schlimmer als die eigene Lage. Das gibt dem (jungen) Zuschauern ein gutes Gefühl. Wahrscheinlich sind das unter Umständen die Hauptgründe für die Faszination Scripted Reality. </p><br>
+
+            <a href="https://www.youtube.com/watch?v=9A96p-iHz4A" class="img-container">
+                <img src="src/img/vorschaufoto.jpg" alt="Vorschaifoto">
+                <div class="hint">Passend zum inhaltlichen Konzept des Scripted-Reality-Formats möchte ich an dieser Stelle ein wundervoll sarkastisches Video vom YouTube-Kanal „Walulis“ beifügen. Viel Spaß beim anschauen. :)</div>
+            </a>
+
+            <h2 id="h6">Wer schaut Doku-Soaps?</h2>
+            <p class="main-text">Der Großteil der Scripted Reality-Formate wird am Nachmittag ausgestrahlt. Hierzu ein kleiner Auszug am Nachmittagsprogramm vom SAT.1, einem der größten Privatfernsehsender Deutschlands neben RTL. </p><br>
+            <p class="main-text">Auffällig dabei ist, dass SAT.1 bereits ab dem frühen Mittag bis zum Abendprogramm durchweg Scripted Reality Formate ausstrahlt. Bei den öffentlichen rechtlichen, hier im Vergleich der </p><br>
+            <div class="img-container">
+                <img src="src/img/programm.jpg" alt="SAT1">
+            </div>
+            <p class="main-text"></p>Sendeplan des gleiches Tages vom ZDF. Hier laufen neben Magazine die typischen Unterhaltungsprogramme, wie „Bares für Rares“. <br>
+            <div class="img-container">
+                <img src="src/img/programm2.jpg" alt="ZDF">
+            </div>
+            <p class="main-text">Wer schaut nun aber eigentlich Doku-Soaps? SAT.1 deckt mit der Sendezeit dieser Formate so gut wie den halben Tag ab, dass sind knapp neun Stunden. In dieser Zeit sind die meisten Deutschen Bürger arbeiten, pendeln nach Hause oder gehen einer Freizeitaktivität nach. Schüler, Hausfrauen oder auch erwerbslose befinden sich zu diesen Sendezeiten zuhause. </p><br>
+            <blockquote>„Eine große Zielgruppe sind Hartz-IV-Empfänger und Hausfrauen, die nachmittags bügeln oder so."</blockquote>
+
+            <p class="main-text">Sind sie die Zielgruppe solcher Formate? Tatsächlich, so erzählt es in einem Interview ein Ex-Autor: „Eine große Zielgruppe sind Hartz-IV-Empfänger und Hausfrauen, die nachmittags bügeln oder so." Dabei können sie ja nicht immer auf den Bildschirm gucken, also muss die Geschichte über Worte und vor allem laut erzählt werden“. </p><br>
+
+            <h2 id="h7">(Persönliches Fazit)</h2>
+            <p class="main-text">Scripted Reality sind eine leichte Kost. Man kann sie nebenbei konsumieren, ohne seine Aufmerksamkeit zu sehr darauf zu lenken. Ebenso aber kann es einem schwer im Magen liegen, wenn man bedenkt, wie viele Deutsche den Unterschied zwischen der erdachten Wirklichkeiten und der eigentlichen Realität nicht erkennen. Doku-Soaps unterhalten uns, gar keine Frage. Sie geben uns unter Umständen ein gutes Gefühl, geben uns ein Gefühl von Überlegenheit. Nur ist das wirklich der Aufgabe der Sender? Und sind wir wirklich in der Lage, uns zu drosseln, kontrolliert und reflektiert einzuschalten und das zu hinterfragen, was uns gerade als Wirklichkeit präsentiert wird?</p><br>
+       
+       
+       
+       
+        </div>
 
 
 
@@ -180,9 +247,9 @@
 				Was hast du dir gemerkt und wie gut kennst du dich mit dem Thema aus?
 				<strong>Teste deine Wissen mit dem Quiz!</strong>
 			</p>
-			<button id="start" class="btn">Quiz Starten</button>
+			<button id="start" class="stn-btn"><i class="icon">play_arrow</i>Quiz Starten</button>
 			</div>
-		</div>
+        </div>
 	</div>
 	<script src="src/js/script.js"></script>
 	<script src="src/js/quiz.js"></script>

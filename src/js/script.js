@@ -53,6 +53,34 @@ dots[slideIndex-1].className += " active";
 }
 
 
+document.getElementById("expand").addEventListener("click", function(){
+        document.getElementById("content_browser").style.top ="35px";
+        document.getElementById("expand").style.display ="none";
+        document.getElementById("minimize").style.display ="block";
+});
+
+document.getElementById("minimize").addEventListener("click", function(){
+    document.getElementById("content_browser").style.top ="";
+    document.getElementById("expand").style.display ="block";
+    document.getElementById("minimize").style.display ="none";
+});
+
+
+
+            
+window.onscroll = function() {myFunction()};
+            
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+
+
+
+
+
 
 
 

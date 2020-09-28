@@ -128,12 +128,11 @@ function getone() {
 
 	if(three.checked){
 		stepone = 1;
-		alert("Richtig");
+		
 	}
 
 	else {
 		stepone = 0;
-		alert("Falsch");
 	}
 
 	return stepone;
@@ -146,12 +145,10 @@ function gettwo(){
 
 	if(two.checked){
 		steptwo = 1;
-		alert("Richtig");
 	}
 
 	else {
 		steptwo = 0;
-		alert("Falsch");
 	}
 
 	return steptwo;
@@ -164,12 +161,10 @@ function getthree(){
 
 	if(one.checked){
 		stepthree = 1;
-		alert("Richtig");
 	}
 
 	else {
 		stepthree = 0;
-		alert("Falsch");
 	}
 
 	return stepthree;
@@ -183,12 +178,10 @@ function getfour(){
 
 	if(three.checked){
 		stepfour = 1;
-		alert("Ant 4Richtig");
 	}
 
 	else {
 		stepfour = 0;
-		alert("Ant 4 Falsch");
 	}
 
 	return stepfour;
@@ -201,12 +194,10 @@ function getfive(){
 
 	if(one.checked){
 		stepfive = 1;
-		alert("Richtig");
 	}
 
 	else {
 		stepfive = 0;
-		alert("Falsch");
 	}
 
 	return stepfive;
@@ -216,16 +207,24 @@ function getscore(){
 	score = getone() +gettwo() +getthree() +getfour() +getfive();
 
 	var nameend = document.getElementById("name").value;
+	document.getElementById("hide").innerHTML ="Du kannst dein Ergebnis jeder Zeit neu berechnen."
 	
 		if(nameend == "") {
 			document.getElementById("score").innerHTML = "Du hast " +score +"/5 Fragen richtig beantwortet!";
+
+			if(score == 0){
+				document.getElementById("score").innerHTML = "Du hast leider keine der Fragen richtig beantwortet.";	
+			}
 		}
 	
 		else {
 			document.getElementById("score").innerHTML = nameend +", du hast " +score +"/5 Fragen richtig beantwortet!";
+
+			if(score == 0){
+				document.getElementById("score").innerHTML = nameend +", du hast leider keine der Fragen richtig beantwortet.";	
+			}
+
 		} 
-	
-	alert(score);
 }
 
 
